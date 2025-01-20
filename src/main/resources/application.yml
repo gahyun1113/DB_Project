@@ -12,6 +12,7 @@ spring:
       initialize-schema: always
 
   jpa:
+    show-sql: false
     hibernate:
       ddl-auto: update
     properties:
@@ -37,5 +38,5 @@ server:
 logging:
   level:
     com.example.sns_project.batch.aspect: INFO
-    org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.SQL: OFF
+    org.hibernate.type.descriptor.sql.BasicBinder: OFF
