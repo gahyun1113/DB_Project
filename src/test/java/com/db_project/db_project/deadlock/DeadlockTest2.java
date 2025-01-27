@@ -47,15 +47,19 @@ public class DeadlockTest2 {
         Long firstId = resource1.getId();
         Long secondId = resource2.getId();
 
-        // ExecutorService로 두 트랜잭션을 동시에 실행
-        ExecutorService executorService = Executors.newFixedThreadPool(2);
-        executorService.submit(() -> deadlockService2.transferFromAccount1ToAccount2(firstId, secondId));
-        executorService.submit(() -> deadlockService2.transferFromAccount2ToAccount1(secondId, firstId));
+        Thread thread1 = new Thread(() -> {
+            deadlockService2.transferFromAccount1ToAccount2(firstId, secondId);
+        });
 
-        // 두 트랜잭션이 완료되기를 기다립니다.
-        Thread.sleep(30000); // 충분히 시간을 주어 데드락을 발생시키게 함
+        Thread thread2 = new Thread(() -> {
+            deadlockService2.transferFromAccount2ToAccount1(secondId, firstId);
+        });
 
-        executorService.shutdown();
+        thread1.start();
+        thread2.start();
+
+        thread1.join();
+        thread2.join();
     }
 }
 

@@ -1,9 +1,24 @@
 spring:
+#  datasource:
+#    url: jdbc:mariadb://localhost:3306/db_project
+#    username: root
+#    password: 1234
+#    driver-class-name: org.mariadb.jdbc.Driver
+
   datasource:
-    url: jdbc:mariadb://localhost:3306/db_project
-    username: root
-    password: 1234
-    driver-class-name: org.mariadb.jdbc.Driver
+    # Master DB (쓰기용)
+    master:
+      url: jdbc:mariadb://localhost:3306/master
+      username: root
+      password: 1234
+      driver-class-name: org.mariadb.jdbc.Driver
+
+    # Replica DB (읽기용)
+    replica:
+      url: jdbc:mariadb://localhost:3306/replica
+      username: root
+      password: 1234
+      driver-class-name: org.mariadb.jdbc.Driver
 
   batch:
     insert:
