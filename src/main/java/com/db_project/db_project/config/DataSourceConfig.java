@@ -16,11 +16,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
-@Configuration
-@EnableTransactionManagement
-@EnableJpaRepositories(basePackages = "com.db_project.db_project.repository",
-        entityManagerFactoryRef = "entityManagerFactory",
-        transactionManagerRef = "transactionManager")
+//@Configuration
+//@EnableTransactionManagement
+//@EnableJpaRepositories(basePackages = "com.db_project.db_project.repository",
+//        entityManagerFactoryRef = "entityManagerFactory",
+//        transactionManagerRef = "transactionManager")
 public class DataSourceConfig {
 
     @Primary

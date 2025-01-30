@@ -11,8 +11,8 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
-@EnableJpaRepositories(basePackages = "com.db_project.db_project.repository.replica")
+//@Configuration
+//@EnableJpaRepositories(basePackages = "com.db_project.db_project.repository.replica")
 public class RoutingDataSourceConfig {
 
     @Bean
