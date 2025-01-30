@@ -5,12 +5,14 @@ import com.db_project.db_project.router.ReadWriteRoutingDataSource;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
+@EnableJpaRepositories(basePackages = "com.db_project.db_project.repository.replica")
 public class RoutingDataSourceConfig {
 
     @Bean

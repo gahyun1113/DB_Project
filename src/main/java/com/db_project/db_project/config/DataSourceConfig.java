@@ -1,6 +1,4 @@
 package com.db_project.db_project.config;
-import com.db_project.db_project.router.DataSourceRouter;
-import com.zaxxer.hikari.HikariDataSource;
 
 import jakarta.persistence.EntityManagerFactory;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -26,13 +24,13 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     @Primary
-    @Bean(name = "masterDataSource")
+    @Bean(name = "masterDataSource2")
     @ConfigurationProperties(prefix = "spring.datasource.master")
     public DataSource masterDataSource() {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "replicaDataSource")
+    @Bean(name = "replicaDataSource2")
     @ConfigurationProperties(prefix = "spring.datasource.replica")
     public DataSource replicaDataSource() {
         return DataSourceBuilder.create().build();

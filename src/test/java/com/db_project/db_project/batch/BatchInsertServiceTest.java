@@ -1,4 +1,4 @@
-package com.db_project.db_project.batch.service;
+package com.db_project.db_project.batch;
 
 import com.db_project.db_project.service.BatchInsertService;
 
