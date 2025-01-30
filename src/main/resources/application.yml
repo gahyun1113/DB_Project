@@ -5,6 +5,32 @@ spring:
     password: 1234
     driver-class-name: org.mariadb.jdbc.Driver
 
+#  datasource:
+#    # Master DB (쓰기용)
+#    master:
+#      url: jdbc:mariadb://localhost:3306/master
+#      username: root
+#      password: 1234
+#      driver-class-name: org.mariadb.jdbc.Driver
+#
+#    # Replica DB (읽기용)
+#    replica:
+#      url: jdbc:mariadb://localhost:3306/replica
+#      username: root
+#      password: 1234
+#      driver-class-name: org.mariadb.jdbc.Driver
+
+# 카프카
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: kafka-group
+      auto-offset-reset: earliest
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    topic: test-topic
+
   batch:
     insert:
       limit: 1000000
