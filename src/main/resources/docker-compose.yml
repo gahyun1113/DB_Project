@@ -19,3 +19,13 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     depends_on:
       - zookeeper
+
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq_container
+    ports:
+      - "5672:5672"  # AMQP 포트 (Spring Boot가 연결하는 포트)
+      - "15672:15672"  # 웹 관리 UI 포트 (http://localhost:15672)
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
