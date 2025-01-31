@@ -93,14 +93,14 @@
 
 #### 💡 해결 방안
 - **읽기 확장**:
-  - 리드 레플리카(Read Replica) 설정
+  - [리드 레플리카(Read Replica)](study/replica.md) 설정
 - **읽기 확장**:
   - 샤딩(Sharding)을 통해 테이블을 분리
     <br><br>
 
 ---
 
-3️⃣
+
 
 
 
