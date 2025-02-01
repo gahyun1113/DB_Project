@@ -14,7 +14,7 @@
 ## 📌 RabbitMQ의 주요 개념
 
 
-![img.png](img.png)
+![img.png](image/rabbitmq.png)
 
 
 ### 1️⃣ Producer (생산자)
@@ -179,23 +179,23 @@ public class MessageConsumer2 {
 ### 4️⃣ RabbitMQ http://localhost:15672/ 접속
 
 
-![img_1.png](img_1.png)
+![img_1.png](image/rabbitmq2.png)
 
 - 아이디, 비번 guest 로 접속하면 RabbitMQ에 대한 정보를 쉽게 시각화 되어 있어 볼수 있음.
 - Queue, Exchange 등의 정보 확인 가능. 큐 추가도 가능
 
 <br><br>
 ### 5️⃣ PostMan으로 데이터 던져보기 
-![img_2.png](img_2.png)
+![img_2.png](image/rabbitmq3.png)
 
-![img_3.png](img_3.png)
+![img_3.png](image/rabbitmq4.png)
 
 - 숫자만 던졌을 경우 라우팅 키가 number 로 되면서 해당 큐로 전송됨.
   <br><br>
 
 
-![img_4.png](img_4.png)
-![img_5.png](img_5.png)
+![img_4.png](image/rabbitmq5.png)
+![img_5.png](image/rabbitmq6.png)
 
 - 문자열을 던졌을때도 마찬가지로 잘 작동함.
 
