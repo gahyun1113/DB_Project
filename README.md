@@ -34,7 +34,7 @@
   - 자주 사용되는 컬럼에 인덱스 추가
   - 과도한 인덱스 생성을 방지
 - **대용량 데이터 처리**:
-  - [Spring Batch](study/SPRING_BATCH)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
+  - [Spring Batch](study/SPRING_BATCH.md)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
 - **캐싱**:
   - Redis를 사용하여 조회 요청을 줄임
     <br><br>
@@ -78,8 +78,8 @@
   - 경합 가능성에 따라 적절히 선택
 - **큐 기반 처리**:
   - 중요한 작업은 메시지 큐를 통해 순차적으로 처리하여 데이터 일관성을 보장
-  - [RabbitMQ](study/RABBITMQ)
-  - [Kafka](study/KAFKA)
+  - [RabbitMQ](study/RABBITMQ.md)
+  - [Kafka](study/KAFKA.md)
     <br><br>
 ---
 
@@ -93,9 +93,9 @@
 
 #### 💡 해결 방안
 - **읽기 확장**:
-  - [리드 레플리카(Read Replica)](study/REPLICATION) 설정
+  - [리드 레플리카(Read Replica)](study/REPLICATION.md) 설정
 - **읽기 확장**:
-  - [샤딩(Sharding)](study/SHARDING)을 통해 테이블을 분리
+  - [샤딩(Sharding)](study/SHARDING.md)을 통해 테이블을 분리
     <br><br>
 
 ---
