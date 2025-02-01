@@ -34,9 +34,9 @@
   - 자주 사용되는 컬럼에 인덱스 추가
   - 과도한 인덱스 생성을 방지
 - **대용량 데이터 처리**:
-  - [Spring Batch](study/SpringBatch)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
+  - [Spring Batch](study/SpringBatch.md)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
 - **캐싱**:
-  - [Redis](study/Redis)를 사용하여 조회 요청을 줄임
+  - [Redis](study/Redis.md)를 사용하여 조회 요청을 줄임
     <br><br>
 
 
