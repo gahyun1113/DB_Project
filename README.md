@@ -36,7 +36,7 @@
 - **대용량 데이터 처리**:
   - [Spring Batch](study/SPRING_BATCH.md)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
 - **캐싱**:
-  - Redis를 사용하여 조회 요청을 줄임
+  - [Redis](study/REDIS.md)를 사용하여 조회 요청을 줄임
     <br><br>
 
 
