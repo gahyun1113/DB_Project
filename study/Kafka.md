@@ -93,22 +93,22 @@
 ### 5️⃣ Pull 방식으로 소비자가 부하 조절 가능
 - Consumer가 필요한 만큼 데이터를 가져갈 수 있음 (Pull 방식)
 - RabbitMQ처럼 푸시하면 과부하 발생 가능, Kafka는 이를 방지
-  <br><br><br><br>
+  <br><br>
 
 ---
 <br><br>
-### 🎯 Kafka를 꼭 사용해야 하는 경우
-- ✅ 대량의 데이터를 빠르고 안정적으로 처리해야 할 때
-- ✅ 장애가 발생해도 데이터 손실이 없어야 할 때
-- ✅ 마이크로서비스 아키텍처에서 이벤트 기반으로 연동할 때
-- ✅ 로그 데이터, 실시간 분석, 스트리밍 데이터 처리가 필요할 때
+### ✅ Kafka를 꼭 사용해야 하는 경우
+- 대량의 데이터를 빠르고 안정적으로 처리해야 할 때
+- 장애가 발생해도 데이터 손실이 없어야 할 때
+- 마이크로서비스 아키텍처에서 이벤트 기반으로 연동할 때
+- 로그 데이터, 실시간 분석, 스트리밍 데이터 처리가 필요할 때
   <br><br>
 ---
 <br><br>
-### 🎯 Kafka를 안 써도 되는 경우
-- ❌ 간단한 메시징 시스템이 필요할 때 (RabbitMQ, Redis Pub/Sub이 더 적합)
-- ❌ 데이터의 실시간성이 매우 중요한 경우 (WebSocket 같은 실시간 푸시가 필요할 때)
-- ❌ 소규모 프로젝트에서 설정이 복잡할 때 (Kafka는 설정 & 운영이 어려움)
+### ❌ Kafka를 안 써도 되는 경우
+- 간단한 메시징 시스템이 필요할 때 (RabbitMQ, Redis Pub/Sub이 더 적합)
+- 데이터의 실시간성이 매우 중요한 경우 (WebSocket 같은 실시간 푸시가 필요할 때)
+- 소규모 프로젝트에서 설정이 복잡할 때 (Kafka는 설정 & 운영이 어려움)
   <br><br>
 ---
 <br><br>
@@ -123,7 +123,7 @@
 
 ### 2️⃣ KafkaProducer
 
-```
+```java
 @Service
 @RequiredArgsConstructor
 public class KafkaProducer {
@@ -144,7 +144,7 @@ public class KafkaProducer {
 
 ### 3️⃣ KafkaConsumer
 
-```
+```java
 @Service
 @RequiredArgsConstructor
 public class KafkaConsumer{
@@ -166,7 +166,7 @@ public class KafkaConsumer{
 
 ### 4️⃣ KafkaController
 
-```
+```java
 @RestController
 @RequestMapping("/api/kafka")
 @RequiredArgsConstructor

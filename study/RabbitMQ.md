@@ -76,7 +76,7 @@
 
 ### 1️⃣ RabbitMQConfig
 
-```
+```java
 @Configuration
 public class RabbitMQConfig {
 
@@ -126,7 +126,7 @@ public class RabbitMQConfig {
 <br><br>
 ### 2️⃣ Producer
 
-```
+```java
 @RestController
 @RequiredArgsConstructor
 public class MessageProducer2 {
@@ -157,7 +157,7 @@ public class MessageProducer2 {
 <br><br>
 ### 3️⃣ Consumer
 
-```
+```java
 @Service
 public class MessageConsumer2 {
 

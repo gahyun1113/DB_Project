@@ -34,9 +34,9 @@
   - 자주 사용되는 컬럼에 인덱스 추가
   - 과도한 인덱스 생성을 방지
 - **대용량 데이터 처리**:
-  - [Spring Batch](study/SPRING_BATCH.md)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
+  - [Spring Batch](study/SpringBatch)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
 - **캐싱**:
-  - [Redis](study/REDIS.md)를 사용하여 조회 요청을 줄임
+  - [Redis](study/Redis)를 사용하여 조회 요청을 줄임
     <br><br>
 
 
@@ -78,8 +78,8 @@
   - 경합 가능성에 따라 적절히 선택
 - **큐 기반 처리**:
   - 중요한 작업은 메시지 큐를 통해 순차적으로 처리하여 데이터 일관성을 보장
-  - [RabbitMQ](study/RABBITMQ.md)
-  - [Kafka](study/KAFKA.md)
+  - [RabbitMQ](study/RabbitMQ.md)
+  - [Kafka](study/Kafka.md)
     <br><br>
 ---
 
@@ -93,15 +93,35 @@
 
 #### 💡 해결 방안
 - **읽기 확장**:
-  - [리드 레플리카(Read Replica)](study/REPLICATION.md) 설정
+  - [리드 레플리카(Read Replica)](study/Replication.md) 설정
 - **읽기 확장**:
-  - [샤딩(Sharding)](study/SHARDING.md)을 통해 테이블을 분리
+  - [샤딩(Sharding)](study/Sharding.md)을 통해 테이블을 분리
     <br><br>
 
 ---
 
 
+### 4️⃣ 접속 및 연결 문제
+#### 🔍 문제 상황
+- **DB 연결 실패**: 커넥션 풀이 가득 차거나 네트워크 문제가 발생.
+- **타임아웃 문제**: 연결 시간이 초과되거나 쿼리가 실행되지 않음.
+  <br><br>
+#### 💡 해결 방법
+- 커넥션 풀 관리:
+  - [HikariCP](study/HikariCP.md)와 같은 효율적인 커넥션 풀 사용.
+  - 최대 연결 수와 타임아웃 값을 적절히 설정.
+    <br><br>
+---
 
-
+1️⃣
+2️⃣
+3️⃣
+4️⃣
+5️⃣
+6️⃣
+7️⃣
+8️⃣
+9️⃣
+💡
 
 
