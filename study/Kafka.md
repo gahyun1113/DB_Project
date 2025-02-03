@@ -4,7 +4,8 @@
 - **분산 메시지 스트리밍 플랫폼으로, 대량의 데이터를 빠르고 안정적으로 처리하는 시스템**
 - 메모리 저장방식의 RabbitMQ와 다르게 디스크에 저장하여 메모리 유실이 없음
   <br><br>
----
+
+
 
 ![img.png](image/kafka.png)
 ![img.png](image/kafka2.png)
@@ -54,7 +55,7 @@
 - ZooKeeper 의존성이 강해 Kafka 3.0부터 Zookeeper 없이 KRaft(Kafka Raft) 사용 가능
   <br><br>
 
----
+
 ## 📌 Kafka 작동 방식
 1️⃣ Producer가 특정 토픽으로 메시지 전송 <br>
 2️⃣ Kafka Broker가 메시지를 받아 파티션에 저장 <br>
@@ -64,9 +65,8 @@
 
 <br><br>
 
----
-<br><br>
-## 📌 왜 Kafka를 쓸까?
+
+## ❓ 왜 Kafka를 쓸까?
 
 ### 1️⃣ 높은 처리량 & 빠른 속도 (High Throughput & Low Latency)
 - 초당 수백만 건의 메시지 처리 가능 (배치 전송 & 압축 가능)
@@ -94,7 +94,7 @@
 - RabbitMQ처럼 푸시하면 과부하 발생 가능, Kafka는 이를 방지
   <br><br>
 
----
+
 
 ### ✅ Kafka를 꼭 사용해야 하는 경우
 - 대량의 데이터를 빠르고 안정적으로 처리해야 할 때
@@ -108,7 +108,7 @@
 - 데이터의 실시간성이 매우 중요한 경우 (WebSocket 같은 실시간 푸시가 필요할 때)
 - 소규모 프로젝트에서 설정이 복잡할 때 (Kafka는 설정 & 운영이 어려움)
   <br><br>
----
+
 
 ## 📌 도커로 Kafka 테스트 해보기
 ### 1️⃣ 도커 설치, yml 파일 설정 

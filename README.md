@@ -34,9 +34,9 @@
   - 자주 사용되는 컬럼에 인덱스 추가
   - 과도한 인덱스 생성을 방지
 - **대용량 데이터 처리**:
-  - [Spring Batch](study/SpringBatch.md)를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
+  - **[Spring Batch](study/SpringBatch.md)** 를 사용하여 특정 시간마다 100만 건의 데이터를 삽입
 - **캐싱**:
-  - [Redis](study/Redis.md)를 사용하여 조회 요청을 줄임
+  - **[Redis](study/Redis.md)** 를 사용하여 조회 요청을 줄임
     <br><br>
 
 
@@ -78,8 +78,8 @@
   - 경합 가능성에 따라 적절히 선택
 - **큐 기반 처리**:
   - 중요한 작업은 메시지 큐를 통해 순차적으로 처리하여 데이터 일관성을 보장
-  - [RabbitMQ](study/RabbitMQ.md)
-  - [Kafka](study/Kafka.md)
+  - **[RabbitMQ](study/RabbitMQ.md)**
+  - **[Kafka](study/Kafka.md)**
     <br><br>
 ---
 
@@ -107,11 +107,24 @@
 - **타임아웃 문제**: 연결 시간이 초과되거나 쿼리가 실행되지 않음.
   <br><br>
 #### 💡 해결 방법
-- 커넥션 풀 관리:
+- **커넥션 풀 관리**:
   - [HikariCP](study/HikariCP.md)와 같은 효율적인 커넥션 풀 사용.
   - 최대 연결 수와 타임아웃 값을 적절히 설정.
     <br><br>
 ---
+
+### 5️⃣ 트랜잭션 관리 문제
+#### 🔍 문제 상황
+- **Partial Commit**: 여러 작업 중 일부만 성공하고 나머지는 실패.
+- **트랜잭션 경합**: 여러 트랜잭션이 동일한 데이터를 수정하려고 시도.
+
+#### 💡 해결 방법
+- **ACID 트랜잭션**:
+   - **[@Transactional](study/Transactional.md)** 을 통해 트랜잭션 범위를 관리
+- **트랜잭션 재시도**:
+   - 충돌 발생 시 자동 재시도 메커니즘 구현
+   - AOP(Aspect-Oriented Programming)을 사용하여 재시도 로직 작성
+   - @Transactional 애노테이션을 사용하여 트랜잭션 격리 수준을 설정
 
 1️⃣
 2️⃣
