@@ -71,7 +71,7 @@
 
 #### 💡 해결 방안
 - **트랜잭션 격리 수준 조정**:
-  - READ COMMITTED 또는 REPEATABLE READ로 설정
+  - **[READ COMMITTED](study/Isolation.md)**
 - **락 타임아웃 설정**:
   - 트랜잭션 대기 시간을 제한하여 데드락 방지
 - **낙관적 락과 비관적 락 사용**:
@@ -93,9 +93,9 @@
 
 #### 💡 해결 방안
 - **읽기 확장**:
-  - [리드 레플리카(Read Replica)](study/Replication.md) 설정
+  - **[리드 레플리카(Read Replica)](study/Replication.md)** 설정
 - **읽기 확장**:
-  - [샤딩(Sharding)](study/Sharding.md)을 통해 테이블을 분리
+  - **[샤딩(Sharding)](study/Sharding.md)** 을 통해 테이블을 분리
     <br><br>
 
 ---
