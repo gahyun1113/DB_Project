@@ -13,6 +13,7 @@ public class RabbitMQConfig {
     // Queue 이름
     private static final String NUMBER_QUEUE = "number_queue";
     private static final String TEXT_QUEUE = "text_queue";
+    private static final String TEST_QUEUE = "test_queue";
 
     // Exchange 생성
     @Bean
@@ -31,6 +32,12 @@ public class RabbitMQConfig {
     public Queue textQueue() {
         return new Queue(TEXT_QUEUE);
     }
+
+    @Bean
+    public Queue testQueue() {
+        return new Queue(TEST_QUEUE);
+    }
+
 
     // 숫자 큐와 바인딩
     @Bean

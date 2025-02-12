@@ -13,7 +13,7 @@ public class MessageProducer {
 
     private final RabbitTemplate rabbitTemplate;
 
-    @Value("${spring.rabbitmq.template.default-receive-queue}")
+    @Value("test-queue")
     private String queueName;
 
     @GetMapping("/send")

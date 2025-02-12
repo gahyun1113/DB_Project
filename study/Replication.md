@@ -21,12 +21,15 @@
 1️⃣ **읽기 부하 분산**
 - 다수의 사용자가 데이터를 조회할 때, Replica DB가 부담을 나눠 가져 성능을 향상시킴
   <br><br>
+
 2️⃣ **고가용성(High Availability)**
 - Primary DB가 장애가 발생하면 Replica DB를 Primary로 승격(Failover)하여 서비스 지속 가능
   <br><br>
+
 3️⃣ **백업 및 복구**
 - Primary DB의 데이터를 보호하고, 실수로 데이터가 삭제되었을 때 복구 가능
   <br><br>
+
 4️⃣ **데이터 분석 분리**
 - 분석용 쿼리를 Replica DB에서 실행하여 Primary DB의 성능을 유지
 <br><br>
