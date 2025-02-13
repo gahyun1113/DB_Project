@@ -125,8 +125,8 @@
 
 ### ✅ 테스트 결과
 #### 1️⃣ HikariCP 유무
-- HikariCP ❌ : 4ms
-- HikariCP ⭕️ : 0ms
+- HikariCP ❌ : 4 ms
+- HikariCP ⭕️ : 0 ms
   <br>
 
 #### 2️⃣ 최대 커넥션 수 조정 
