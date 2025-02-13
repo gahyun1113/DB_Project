@@ -13,11 +13,11 @@ import java.sql.SQLException;
 public class NoPoolController {
     @GetMapping("/nopool")
     public String noPoolTest() {
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
         try (Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/db_project", "root", "1234")) {
-            long elapsedTime = System.nanoTime() - startTime;
-            return "No Pool - Connection time: " + (elapsedTime / 1_000_000) + " ms";
+                "jdbc:mariadb://localhost:3306/db_project", "root", "1234")) {
+            long endTime = System.currentTimeMillis();
+            return "No Pool - Connection time: " + (endTime-startTime) + " ms";
         } catch (SQLException e) {
             return "Connection failed: " + e.getMessage();
         }

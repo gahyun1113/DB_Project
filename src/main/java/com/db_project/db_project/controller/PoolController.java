@@ -17,10 +17,10 @@ public class PoolController {
 
     @GetMapping("/pool")
     public String poolTest() {
-        long startTime = System.nanoTime();
+        long startTime = System.currentTimeMillis();
         try (Connection conn = dataSource.getConnection()) {
-            long elapsedTime = System.nanoTime() - startTime;
-            return "With Pool - Connection time: " + (elapsedTime / 1_000_000) + " ms";
+            long endTime = System.currentTimeMillis();
+            return "With Pool - Connection time: " + (endTime-startTime) + " ms";
         } catch (SQLException e) {
             return "Connection failed: " + e.getMessage();
         }
